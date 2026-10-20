@@ -22,7 +22,7 @@ export default function PetCard({
   onFavouriteChange,
 }: PetCardProps) {
   return (
-    <div className="relative max-w-sm overflow-hidden rounded-[36px] bg-white shadow-sm">
+    <div className="relative overflow-hidden rounded-[36px] bg-white shadow-sm">
       {/* Overlay badges */}
       <div className="absolute left-4 right-4 top-4 z-10 flex items-center justify-between">
         <span className="rounded-full bg-white/90 px-4 py-1.5 text-sm font-semibold text-gray-800 backdrop-blur-sm">

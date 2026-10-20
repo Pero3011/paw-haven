@@ -63,7 +63,8 @@ export default function HowAdoptionWorks() {
             <div key={index} className="bg-white p-6 rounded-2xl">
               <div className="mb-4">
                 <span
-                  className={`bg-[${cont.bgColor}] text-[${cont.textColor}] inline-flex items-center justify-center w-12 h-12 rounded-full font-headline font-bold text-xl`}
+                  className="inline-flex items-center justify-center w-12 h-12 rounded-full font-headline font-bold text-xl"
+                  style={{backgroundColor:cont.bgColor,color:cont.textColor}}
                 >
                   {index + 1}
                 </span>
