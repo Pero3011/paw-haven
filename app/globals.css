@@ -2,9 +2,10 @@
 
 @theme {
   --color-primary: #F4A261;
-  --color-secondary: #A8C3A0;
+  --color-secondary: #CEEAC5;
   --color-tertiary: #FDEEE4;
-  --color-neutral: #7A3E12;
+  --color-neutral: #8E4E14;
+  --color-text: #251912;
 
   --font-headline: var(--font-jakart-sans), sans-serif;
   --font-body: var(--font-nunito-sans), sans-serif;

@@ -1,3 +1,4 @@
+import DetailsCard from "@/app/components/home/DetailsCard";
 import Hero from "@/app/components/home/Hero";
 import HowAdoptionWorks from "@/app/components/home/HowAdoptionWorks";
 import PetsSection from "@/app/components/home/PetsSection";
@@ -12,6 +13,7 @@ export default function HomePage() {
         <Hero />
         <PetsSection />
         <HowAdoptionWorks />
+        <DetailsCard/>
       </div>
       <Footer />
     </div>
