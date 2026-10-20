@@ -8,11 +8,13 @@ import { filterSortPets } from "@/app/lib/FilterSort";
 
 import PetGrid from "./PetGrid";
 import FilterBar from "./FilterBar";
+import DetailsCard from "./DetailsCard";
 
 export default function PetsSection() {
   const [sortParam, setSortParam] = useState("Newest");
   const [catParam, setCatParam] = useState("All Pets");
   const [searchParam, setSearchParam] = useState("");
+  const [selectedPetId, setSelectedPetId] = useState<string | null>(null);
 
   // Centralized favorite state
   const [favouriteNames, setFavouriteNames] = useState<string[]>(() =>
@@ -88,7 +90,15 @@ export default function PetsSection() {
         pets={filteredPets}
         favouriteNames={favouriteNames}
         onFavouriteToggle={handleFavouriteToggle}
+        onMeet={(petId) => setSelectedPetId(petId)}
       />
+
+      {selectedPetId && (
+        <DetailsCard
+          petId={selectedPetId}
+          onClose={() => setSelectedPetId(null)}
+        />
+      )}
     </section>
   );
 }

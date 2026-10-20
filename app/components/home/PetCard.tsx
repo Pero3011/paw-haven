@@ -6,9 +6,11 @@ import { Heart, MapPin, PawPrint } from "lucide-react";
 interface PetCardProps extends PetCardData {
   isFavourite: boolean;
   onFavouriteChange: () => void;
+  onMeet: () => void;
 }
 
 export default function PetCard({
+  id,
   category,
   imgPath,
   name,
@@ -20,6 +22,7 @@ export default function PetCard({
   description,
   isFavourite,
   onFavouriteChange,
+  onMeet
 }: PetCardProps) {
   return (
     <div className="relative overflow-hidden rounded-[36px] bg-white shadow-sm">
@@ -88,6 +91,7 @@ export default function PetCard({
         {/* Button */}
         <div className="pt-2">
           <button
+            onClick={onMeet}
             type="button"
             className="flex w-full items-center justify-center gap-2 rounded-full bg-[#FCECE4] px-4 py-3 text-sm font-bold text-[#2D1A0E] transition-colors hover:bg-[#f8ded1]"
           >
